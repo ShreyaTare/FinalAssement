@@ -26,7 +26,7 @@ public class myController {
     // }
 
     @GetMapping("/")
-    public String allRecords(@ModelAttribute User user, Model model) {
+    public String showhomepage(@ModelAttribute User user, Model model) {
         
         List<User> records = myser.getAll();
        // model.addAttribute("records", records);
