@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-image: url(https://akm-img-a-in.tosshub.com/indiatoday/images/story/202107/VAccine.jpg?size=690:388);
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        }
+
+        h1 {
+            text-align: center;
+            color: #007BFF;
+        }
+
+        form {
+            max-width: 400px;
+            /* margin-left: 50px; */
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        input[type="text"],
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+
+        select {
+            height: 38px;
+        }
+
+        input[type="submit"] {
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        form{
+            background-color: antiquewhite;
+        }
+    </style>
+</head>
+<body>
+    
+    <form th:action="@{/fillform}" method="post">
+        <h1>Add new User</h1>
+        <label for="id">ID:</label>
+        <input type="text" id="id" name="id" required><br>
+        
+        <label for="idType">ID Type:</label>
+        <select id="idType" name="idtype" required>
+            <option value="Aadhaar">Aadhaar</option>
+            <option value="Passport">Passport</option>
+            <option value="Driver's License">Driver's License</option>
+           
+        </select><br>
+        
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br>
+        
+        <label for="contactNumber">Contact Number:</label>
+        <input type="text" id="contactNumber" name="contactnum" required><br>
+        
+        <label for="vaccineName">Vaccine Name:</label>
+        <select id="vaccineName" name="vaccinename" required>
+            <option value="Covaxin">Covaxin</option>
+            <option value="Covishield">Covishield</option>
+            <option value="Sputnik">Sputnik</option>
+            
+        </select><br>
+        
+        <input type="submit" value="Submit">
+    </form>
+
+</body>
+</html>
